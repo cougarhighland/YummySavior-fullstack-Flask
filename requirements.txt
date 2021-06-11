@@ -1,0 +1,17 @@
+# Unittest
+coverage
+
+# Linters
+flake8
+flake8-docstrings
+flake8-polyfill
+pylint
+
+# Flask framework
+Flask>=1.0,<2.0
+Flask-Login==0.5.0
+Flask-SQLAlchemy>=2.0,<3.0
+
+#database
+pysqlite3
+

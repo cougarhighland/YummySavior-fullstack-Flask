@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}About Yummy Saviour{% endblock %}
+{% block content %}
+
+<link rel="stylesheet" href="static/about.css">
+<main role="main">
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Yummy Saviour</h1>
+        <p class="font-weight-bold">Wasting food is not cool. The best you can do for the future generation, save food. Your wasted food could have fed the poor. Yummy Saviour is here to help you save food and waste less. </p>
+        <div>
+          <a href="/signup" class="btn btn-primary my-2">Sign up</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="album text-muted">
+      <div class="container">
+
+        <div class="row">
+          <div class="card">
+            <img src="static/sdg.png" alt="mission">
+            <p class="card-text">Yummy Saviour is a web-based service. Our mission is to promote responsible consumption and production.</p>
+          </div>
+          <div class="card">
+            <img src="static/circular.png" alt="vision">
+            <p class="card-text">Yummy Saviour is a movement. Our vision is to help build a circular economy at large. </p>
+          </div>
+          <div class="card">
+            <img src="static/col.png" alt="values">
+            <p class="card-text">The SDGs have continued to challenge us to stretch our aspirations further, particularly in areas such as reduce food waste and poverty.</p>
+          </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

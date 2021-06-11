@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %}
+{% block content %}
+
+<center class="p-4"><h1>INSIGHT ON FOOD WASTE</h1></center>
+<div class="container py-5">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    
+
+    <script>
+        let values = {{ values|safe }};
+        let names = {{ names|safe }};
+    </script>
+
+ <!-- script for the chart javascript -->
+
+    <script type="text/javascript" src="{{ url_for('static', filename='Chart.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='insight_chart.js') }}"></script>
+
+{% endblock %}

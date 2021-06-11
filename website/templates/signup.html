@@ -1,0 +1,72 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %}
+{% block content %}
+
+<link rel="stylesheet" href="../static/backgroundcolor.css">
+
+<style>
+    input[type="submit"] {
+    font-size: .9em;
+    color: #fff;
+    background: #76b852;
+    outline: none;
+    border: 1px solid #76b852;
+    cursor: pointer;
+    padding: 0.9em;
+    width: 94.5%;
+    margin: 0.15em 0;
+    letter-spacing: 4px;
+  }
+
+    .table {
+    width: 30%;
+    margin: 2em auto;
+    background: rgb(255, 255, 255);
+    padding: 1em 4em 0;
+  }
+
+  input[type="text"], input[type="password"], input[type="businessname"], input[type="location"] {
+    font-size: 0.9em;
+    color: rgb(8, 0, 0);
+    font-weight: 100;
+    width: 94.5%;
+    padding: 0.8em;
+    border: solid 1px rgba(10, 10, 10, 0.37);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #fff 4%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #fff 4%);
+    background-position: -800px 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: rgb(5, 0, 0);
+    font-family: 'Roboto', sans-serif;
+  }
+
+  h1 {
+    font-size: 3em;
+    text-align: center;
+    color: rgb(14, 1, 1);
+    font-weight: 100;
+    text-transform: capitalize;
+    letter-spacing: 4px;
+    font-weight: bold;
+  }
+
+    </style>
+<body>
+<h1>Sign Up</h1>
+<p align="center">Please fill in this form to create an account.</p>
+<div class="table">
+<form method="POST">
+    <input type="text" id='username' name='username' placeholder="Enter username" required><br><br>
+    <input type="password" id='password1' name='password' placeholder="Enter password" required><br><br>
+    <input type="password" id='password2' name='confirm' placeholder="Confirm password" required><br><br>
+    <input type="businessname" id='businessname' name='businessname' placeholder="Enter your business name" required><br><br>
+    <input type="location" id='location' name='location' placeholder="Enter your location" required><br><br>
+    <input type="radio" name="user_type" id="restaurant_select" value='restaurant' required>
+    <label for="restaurant_select">Restaurant</label><br>
+    <input type="radio" name="user_type" id="npo_select" value='npo'>
+    <label for="npo_select">NPO</label><br><br>
+    <input type="submit" value="Submit" class="submitbtn">
+</form>
+</div>
+</body>
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %} {% block content %}
+
+<link rel="stylesheet" href="../static/backgroundcolor.css">
+
+
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid #555555;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 5px;
+        text-align: left;
+    }
+</style>
+
+<div class="container">
+    <h1 class="text-center p-3 pt-5">Welcome to Yummy Food Saviour {{ businessname }}!</h1>
+</div>
+<br>
+<div class="container p-3">
+    <div class="centered">
+        <form method="POST">
+            <div class="form-row">
+                <div class="col-md-3 col-12">
+                    <input aria-label="Food Name" type="text" class="form-control" placeholder="Food Name" name="food_name" required>
+                </div>
+                <div class="col-md-3 col-12">
+                    <input aria-label="Description" type="text" class="form-control" placeholder="Description" name="description" required></div>
+                <div class="col-md-3 col-12">
+                    <input aria-label="Quantity" type="number" class="form-control" placeholder="Quantity" name="quantity" required min="1"></div>
+                <div class="col-md-3 col-12">
+                    <input aria-label="ADD" type="submit" class="btn btn-block btn-warning" value="Add">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<br><br>
+
+<h1 class="h1 p-3 padding-auto text-center">List of Foods</h1>
+<div class="container pb-5">
+    <table class="centered">
+        <tr>
+            <th class="d-flex justify-content-around border-0">
+                <span>Food Name</span>
+                <span>Description</span>
+                <span>Quantity(kg)</span>
+            </th>
+        </tr>
+        {% for food in food %}
+        <tr>
+            <td>
+                <form class="row p-0 m-0" action="{{ url_for('views.update', id=food.id) }}" method="POST" id="update_form_{{ food.id }}">
+                    <input type="hidden" value="{{ food.id }}" name="id">
+                    <input class="col mx-1 form-control" type="text" value="{{ food.food_name }}" name="name">
+                    <input class="col mx-1 form-control" type="text" value="{{ food.description }}" name="description">
+                    <input class="col mx-1 form-control" type="number" value="{{ food.quantity }}" name="quantity">
+                </form>
+            </td>
+            <td>
+                <input class="btn btn-block btn-info" type="submit" form="update_form_{{ food.id }}" name="update" value="Update">
+            </td>
+            <td>
+                <form action="{{ url_for('views.delete', id=food.id) }}" method="POST">
+                    <input type="hidden" value="{{ food.id }}" name="id">
+                    <input class="btn btn-block btn-danger" type="submit" name="delete" value="Delete">
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

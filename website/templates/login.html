@@ -1,0 +1,80 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="../static/backgroundcolor.css"> 
+
+<style>
+
+.submitbtn {
+    font-size: .9em;
+    color: #fff;
+    background: #76b852;
+    outline: none;
+    border: 1px solid #76b852;
+    cursor: pointer;
+    padding: 0.9em;
+    width: 94.5%;
+    margin: 0.15em 0;
+    letter-spacing: 4px;
+  }
+ 
+  input[type="text"], input[type="password"] {
+    font-size: 0.9em;
+    color: rgb(8, 0, 0);
+    font-weight: 100;
+    width: 94.5%;
+    padding: 0.8em;
+    border: solid 1px rgba(10, 10, 10, 0.37);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #fff 4%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #fff 4%);
+    background-position: -800px 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: rgb(5, 0, 0);
+    font-family: 'Roboto', sans-serif;
+  }
+
+  input[type="submit"] {
+    font-size: .9em;
+    color: #fff;
+    background: #76b852;
+    outline: none;
+    border: 1px solid #76b852;
+    cursor: pointer;
+    padding: 0.9em;
+    width: 94.5%;
+    margin: 0.15em 0;
+    letter-spacing: 4px;
+  }
+  
+
+  h1 {
+    font-size: 3em;
+    text-align: center;
+    color: rgb(14, 1, 1);
+    font-weight: 100;
+    text-transform: capitalize;
+    letter-spacing: 4px;
+    font-weight: bold;
+  }
+  .login-form {
+    width: 30%;
+    margin: 2em auto;
+    background: rgb(255, 255, 255);
+    padding: 1em 4em 0;
+  }
+
+</style>
+<body>
+<h1>Log in</h1>
+<div class="login-form">
+  <div class="form">
+<form method="POST">
+    <input type="text" id="username" name="username" placeholder="Username"><br><br>
+    <input type="password" id="password" name="password" placeholder="Password"><br><br>
+    <input type="submit" value="LOGIN"class="submitbtn">
+</form>
+</div>
+</div>
+</body>
+ 
+{% endblock %}

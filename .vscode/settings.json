@@ -1,0 +1,50 @@
+{
+    // COLOR CUSTOMIZATION
+    "workbench.colorCustomizations": {
+        "titleBar.activeBackground": "#333",
+        "titleBar.inactiveBackground": "#333",
+    },
+    // PYTHON LANGUAGE SERVER
+
+
+    "python.analysis.extraPaths": ["./tests"],
+    "python.languageServer": "Pylance",
+    "python.terminal.activateEnvironment": true,
+
+
+    // PYTHON LINTING
+    "python.linting.enabled": true,
+
+    "python.linting.banditEnabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.mypyEnabled": true,
+    "python.linting.pylintEnabled": true,
+
+    "python.linting.pylintArgs": [
+        "--load-plugins",
+        "pylint_flask_sqlalchemy",
+        "pylint_flask",
+        "mypy_flask_sqlalchemy",
+    ],
+
+    "python.linting.mypyArgs": [
+        "--load-plugins",
+        "mypy_flask_sqlalchemy",
+        "mypy_flask",
+        "mypy_flask_sqlalchemy",
+    ],
+
+
+    "coverage-gutters.xmlname": "coverage.xml",
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./tests",
+        "-p",
+        "*_test.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.unittestEnabled": true,
+}
+

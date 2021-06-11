@@ -1,0 +1,10 @@
+.coverage
+*.db
+.venv/
+__pycache__
+htmlcov/
+*.pyc
+*.dot
+/website.egg-info
+.mypy_cache
+

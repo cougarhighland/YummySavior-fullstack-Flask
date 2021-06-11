@@ -1,0 +1,63 @@
+.nav-btn {
+    margin: 0 1rem 0 0;
+}
+
+#nav-logo {
+    position: absolute;
+    right: 0;
+}
+
+#nav-logo > img {
+    padding-right: 10px;
+    height: 45px;
+    width: auto;
+}
+
+#register > input {
+    display: block;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+  /* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
+
+#food-list {
+    background-color: white;
+    text-align: center;
+}
+
+.centered {
+    margin: 0 auto;
+}
+
+#order-table {
+    background-color: white;
+    text-align: center;
+}
+
+#confirm-btn {
+    position: absolute;
+    right: 1rem;
+}
+
+.btn-container {
+    position: relative;
+    min-height: 3rem;
+}
+
+.list-products {
+    margin-left: 3rem;
+}
+
+.alert-spacer {
+    min-height: 3.5rem;
+}
